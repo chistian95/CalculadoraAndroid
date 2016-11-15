@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:weightSum="7"
+
+    android:orientation="vertical"
+    android:background="#70b8c2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#CCCCCC"
+        android:padding="25dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tvResultado"
+                android:layout_gravity="left|top"
+                android:fontFamily="Verdana" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tvResultadoNumerico"
+                android:layout_gravity="right|bottom" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:id="@+id/c"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_c" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="CE"
+            android:id="@+id/ce"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_ce" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="("
+            android:id="@+id/par_i"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_par_izq" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=")"
+            android:id="@+id/par_d"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_par_drc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/dividir"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_div" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:id="@+id/multiplicar"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_mult" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/restar"
+            android:layout_weight="1"
+            android:onClick="calculadora"
+            android:contentDescription="f_res" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/sumar"
+            android:onClick="calculadora"
+            android:contentDescription="f_sum"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.4"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:id="@+id/n_7"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_7" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:id="@+id/n_8"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_8" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:id="@+id/n_9"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_9" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="√"
+                    android:id="@+id/raiz"
+                    android:onClick="calculadora"
+                    android:contentDescription="f_raiz"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:id="@+id/n_4"
+                    android:onClick="calculadora"
+                    android:layout_weight="1"
+                    android:contentDescription="n_4" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:id="@+id/n_5"
+                    android:onClick="calculadora"
+                    android:layout_weight="1"
+                    android:contentDescription="n_5" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:id="@+id/n_6"
+                    android:onClick="calculadora"
+                    android:layout_weight="1"
+                    android:contentDescription="n_6" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sin"
+                    android:id="@+id/sin"
+                    android:onClick="calculadora"
+                    android:contentDescription="f_sin"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/n_1"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:id="@+id/n_2"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_2" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:id="@+id/n_3"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_3" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cos"
+                    android:id="@+id/cos"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="f_cos" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:id="@+id/punto"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="f_punto" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/n_0"
+                    android:layout_weight="1"
+                    android:onClick="calculadora"
+                    android:contentDescription="n_0" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="="
+                    android:id="@+id/calcular"
+                    android:onClick="calculadora"
+                    android:contentDescription="f_calc"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tan"
+                    android:id="@+id/tan"
+                    android:onClick="calculadora"
+                    android:contentDescription="f_tan"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
